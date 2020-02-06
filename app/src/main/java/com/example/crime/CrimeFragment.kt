@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.CheckBox
 import android.widget.EditText
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentContainer
@@ -43,7 +44,7 @@ class CrimeFragment:Fragment() {
     override fun onStart(){
         super.onStart()
 
-        val titleWatcher = object:TextWatcher{
+        val titleWatcher = object : TextWatcher{
             override fun beforeTextChanged(
                 sequence: CharSequence?,
                 start: Int,
