@@ -10,7 +10,6 @@ import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentContainer
 
 class CrimeFragment:Fragment() {
 
@@ -62,9 +61,9 @@ class CrimeFragment:Fragment() {
                 crime.title = sequence.toString()
             }
 
-            override fun afterTextChaged(sequence: Editable?){
-                //leave blank for now
-            }
+            //override fun afterTextChaged(sequence: Editable?){
+            //    //leave blank for now
+            //}
         }
 
         titleField.addTextChangedListener(titleWatcher)
