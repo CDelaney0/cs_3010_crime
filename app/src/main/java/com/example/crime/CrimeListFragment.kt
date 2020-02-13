@@ -16,7 +16,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import java.util.*
 
-
 private const val TAG = "CrimeListFragment"
 
 class CrimeListFragment : Fragment() {
@@ -53,6 +52,7 @@ class CrimeListFragment : Fragment() {
 
         crimeRecyclerView =
             view.findViewById(R.id.crime_recycler_view) as RecyclerView
+        crimeRecyclerView.layoutManager = LinearLayoutManager(context)
         crimeRecyclerView.adapter = adapter
 
         return view
@@ -60,7 +60,7 @@ class CrimeListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        crimeListViewModel.crimeListLiveData.observe(
+        crimeListViewModel.crimesListLiveData.observe(
             viewLifecycleOwner,
             Observer { crimes ->
                 crimes?.let {

@@ -66,33 +66,32 @@ class CrimeFragment:Fragment() {
             })
     }
 
-    override fun onStart(){
+    override fun onStart() {
         super.onStart()
 
-        val titleWatcher = object : TextWatcher{
+        val titleWatcher = object : TextWatcher {
 
             override fun beforeTextChanged(
                 sequence: CharSequence?,
                 start: Int,
                 count: Int,
                 after: Int
-            ){
-                //leave blank for now
+            ) {
+                // This space intentionally left blank
             }
+
             override fun onTextChanged(
                 sequence: CharSequence?,
                 start: Int,
                 before: Int,
                 count: Int
-            ){
+            ) {
                 crime.title = sequence.toString()
             }
-/*
-            override fun afterTextChaged(sequence: Editable?){
-                //leave blank for now
-            }
 
- */
+            override fun afterTextChanged(sequence: Editable?) {
+                // This one too
+            }
         }
 
         titleField.addTextChangedListener(titleWatcher)
